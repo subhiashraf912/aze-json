@@ -28,6 +28,7 @@ db.deleteAll(); //example: db.deleteAll();
 db.find(query); //example: db.find('guildID');
 db.findAll(); //example: db.findAll();
 db.update(query, data); //example: db.update('guildID', {prefix: "!"});
+db.has(query); //returns true/false, example: db.has(guildID);
 ```
 
 Typescript:
@@ -45,4 +46,5 @@ db.deleteAll(); //example: db.deleteAll();
 db.find(query); //example: db.find('guildID');
 db.findAll(); //example: db.findAll();
 db.update(query, data); //example: db.update('guildID', {prefix: "!"});
+db.has(query); //returns true/false, example: db.has(guildID);
 ```
