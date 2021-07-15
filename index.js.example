@@ -1,0 +1,11 @@
+const DB = require('./dist').default;
+const db = new DB({
+      jsonPath: 'GuildSettings.json',
+      createIfDoesntExist: true,
+});
+db.create(query, data); //example: db.create('guildID', {prefix: "!"});
+db.delete(query); //example: db.delete('guildID');
+db.deleteAll(); //example: db.deleteAll();
+db.find(query); //example: db.find('guildID');
+db.findAll(); //example: db.findAll();
+db.update(query, data); //example: db.update('guildID', {prefix: "!"});
