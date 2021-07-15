@@ -6,7 +6,7 @@ Tho I don't recommend saving data in json files, it's better if you use somethin
 
 ## Installation
 
-`npm i --save simple-json-db`
+`npm i --save aze-json-db`
 
 ## Github
 
@@ -17,7 +17,7 @@ https://github.com/subhiashraf912/aze-json
 Javascript:
 
 ```js
-const DB = require('simple-json-db').default;
+const DB = require('aze-json-db').default;
 const db = new DB({
       jsonPath: 'GuildSettings.json',
       createIfDoesntExist: true,
@@ -33,7 +33,7 @@ db.update(query, data); //example: db.update('guildID', {prefix: "!"});
 Typescript:
 
 ```ts
-import DB from 'simple-json-db';
+import DB from 'aze-json-db';
 
 const db = new DB({
       jsonPath: 'GuildSettings.json',

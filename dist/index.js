@@ -85,5 +85,12 @@ class JsonDB {
             console.error(err.message);
         }
     }
+    has(query) {
+        const db = readJsonFile(this.jsonPath);
+        if (!db[query])
+            return false;
+        else
+            true;
+    }
 }
 exports.default = JsonDB;

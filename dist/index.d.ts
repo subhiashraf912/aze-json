@@ -11,5 +11,6 @@ export default class JsonDB {
     create(indexQuery: string, newData: any): any;
     delete(indexQuery: string): any;
     deleteAll(): any;
+    has(query: string): false | undefined;
 }
 export {};
