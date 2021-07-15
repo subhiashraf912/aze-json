@@ -1,7 +1,7 @@
 {
-      "name": "aze-json",
+      "name": "simple-json-db",
       "version": "1.0.0",
-      "description": "",
+      "description": "A simple node module that let's you create a database based on json files easily and manage it.",
       "main": "dist/index.js",
       "scripts": {
             "test": "echo \"Error: no test specified\" && exit 1",

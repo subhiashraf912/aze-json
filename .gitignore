@@ -2,3 +2,4 @@ node_modules
 index.ts
 test.json
 tsconfig.json
+package-lock.json
