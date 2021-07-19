@@ -21,7 +21,7 @@ class JsonDB {
         catch (err) {
             if (options.createIfDoesntExist) {
                 console.log(`${this.jsonPath} file wasn't found, creating one...`);
-                fs_1.default.writeFileSync(this.jsonPath, JSON.stringify({}), {
+                fs_1.default.writeFileSync(this.jsonPath, JSON.stringify({}, undefined, 4), {
                     encoding: 'utf-8',
                 });
             }
@@ -43,7 +43,7 @@ class JsonDB {
             return console.error(`Couldn't find the index query:\n${indexQuery}\nin the database to update it!`);
         db[indexQuery] = newData;
         try {
-            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(db));
+            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(db, undefined, 4));
             return readJsonFile(this.jsonPath);
         }
         catch (err) {
@@ -56,7 +56,7 @@ class JsonDB {
             return console.error(`The index query ${indexQuery} already exists in the database!`);
         db[indexQuery] = newData;
         try {
-            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(db));
+            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(db, undefined, 4));
             return readJsonFile(this.jsonPath);
         }
         catch (err) {
@@ -69,7 +69,7 @@ class JsonDB {
             return console.error(`Couldn't find the index query:\n${indexQuery}\nin the database to delete it!`);
         try {
             delete db[indexQuery];
-            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(db));
+            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(db, undefined, 4));
             return readJsonFile(this.jsonPath);
         }
         catch (err) {
@@ -78,7 +78,7 @@ class JsonDB {
     }
     deleteAll() {
         try {
-            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(emptyObject));
+            fs_1.default.writeFileSync(this.jsonPath, JSON.stringify(emptyObject, undefined, 4));
             return readJsonFile(this.jsonPath);
         }
         catch (err) {

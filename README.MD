@@ -4,6 +4,8 @@ A simple node module that some people requested me to create!
 Using this module you can create a database based on json files easily and manage it.
 Tho I don't recommend saving data in json files, it's better if you use something like MongoDB etc.
 
+Update #1.0.2: Creating pretty json files
+
 ## Installation
 
 `npm i --save aze-json-db`
